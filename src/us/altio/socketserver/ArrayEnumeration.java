@@ -1,3 +1,4 @@
+package us.altio.socketserver;
 import java.util.Enumeration;
 import java.util.NoSuchElementException;
 

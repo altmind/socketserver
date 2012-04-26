@@ -1,4 +1,4 @@
-package model;
+package us.altio.socketserver.model;
 
 import java.util.HashMap;
 import java.util.Map;

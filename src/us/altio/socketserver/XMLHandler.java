@@ -1,3 +1,4 @@
+package us.altio.socketserver;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.Socket;
@@ -6,7 +7,6 @@ import java.util.Iterator;
 import java.util.Stack;
 import java.util.concurrent.Callable;
 
-import model.Event;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -18,6 +18,8 @@ import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import us.altio.socketserver.model.Event;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Function;
@@ -80,7 +82,7 @@ public class XMLHandler extends DefaultHandler {
 	}
 
 	private void processCharacters(boolean runEvents) {
-		if (runEvents && sb.length()>0 && !CharMatcher.JAVA_WHITESPACE.matchesAllOf(sb.toString()))
+		if (runEvents && sb.length()>0 && !CharMatcher.WHITESPACE.matchesAllOf(sb.toString()))
 		{
 			
 			if (tagStack.peek().endsWith(":message")) {

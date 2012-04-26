@@ -1,3 +1,4 @@
+package us.altio.socketserver;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -11,7 +12,6 @@ import java.util.concurrent.BlockingQueue;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import model.Event;
 
 import org.apache.commons.collections.iterators.ArrayIterator;
 import org.apache.commons.io.IOUtils;
@@ -19,6 +19,8 @@ import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.log4j.Logger;
 import org.xml.sax.InputSource;
+
+import us.altio.socketserver.model.Event;
 
 import com.google.common.base.Function;
 
